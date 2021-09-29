@@ -1,0 +1,15 @@
+# Написать функцию num_translate(),
+# переводящую числительные от 0 до 10 c английского на русский язык.
+
+dic_number= {'zero':'ноль','one': 'один','two': 'два','three': 'три',
+    'four': 'четыре','five': 'пять','six': 'шесть',
+    'seven': 'семь', 'eight': 'восемь','nine': 'девять',
+    'ten': 'десять'}
+
+def num_translate(num_tranc):
+    return dic_number.get(num_tranc)
+
+
+num_tranc = input("Введите число прописью ")
+result=num_translate(num_tranc)
+print(result)
