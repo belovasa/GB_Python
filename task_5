@@ -1,0 +1,14 @@
+# Реализовать функцию get_jokes(), возвращающую n шуток,
+# сформированных из трех случайных слов, взятых из трёх списков
+# (по одному из каждого):
+import random
+my_list=[]
+nouns=['автомобиль','лес','огонь','город','дом']
+adverbs=['сегодня','вчера','завтра','позавчера','ночью']
+adjectives=['веселый','яркий','зеленый','утопичный','мягкий']
+
+def get_jokes(n):
+    for i in range(n):
+        my_list.append(f'{random.choice(nouns)} {random.choice(adverbs)} {random.choice(adjectives)}')
+    return my_list
+print(get_jokes(3))

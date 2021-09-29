@@ -1,0 +1,19 @@
+#Написать функцию thesaurus_adv(), принимающую в качестве аргументов
+# строки в формате «Имя Фамилия» и возвращающую словарь, в котором ключи —
+# первые буквы фамилий, а значения — словари, реализованные по схеме предыдущего
+# задания и содержащие записи, в которых фамилия начинается с соответствующей
+# буквы.
+
+
+def thesaurus_adv(*name_surnames):
+    new_dic = {}
+    for name_surname in name_surnames:
+        name, surname = name_surname.split()
+        new_dic.setdefault(surname[0], {})
+        new_dic[surname[0]].setdefault(name[0], [])
+        new_dic[surname[0]][name[0]].append(name_surname)
+    return new_dic
+
+
+print(thesaurus_adv('Федор Шаляпин','Иван Сергеев','Инна Серова','Петр Алексеев','Илья Иванов','Анна Савельева'))
+

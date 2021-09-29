@@ -1,0 +1,18 @@
+# Доработать предыдущую функцию в num_translate_adv():
+# реализовать корректную работу с числительными, начинающимися с
+# заглавной буквы — результат тоже должен быть с заглавной.
+
+dic_number= {'zero':'ноль','one': 'один','two': 'два','three': 'три',
+    'four': 'четыре','five': 'пять','six': 'шесть',
+    'seven': 'семь', 'eight': 'восемь','nine': 'девять',
+    'ten': 'десять'}
+
+def num_translate_adv(num_tranc):
+    if num_tranc.istitle():
+        return dic_number.get(num_tranc.lower()).capitalize()
+    else: return dic_number.get(num_tranc)
+
+
+num_tranc = input("Введите число прописью ")
+result=num_translate_adv(num_tranc)
+print(result)
