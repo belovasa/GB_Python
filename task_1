@@ -1,0 +1,18 @@
+"""
+1. Написать скрипт, создающий стартер (заготовку) для проекта со следующей структурой папок:
+|--my_project
+   |--settings
+   |--mainapp
+   |--adminapp
+   |--authapp
+"""
+
+import os
+structure = {'my_project': ['settings', 'mainapp', 'adminapp', 'authapp']}
+for root, folders in structure.items():
+    if os.path.exists(root):
+        print(f'{root} существует')
+    else:
+        for folder in folders:
+            my_dir = os.path.join(root, folder)
+            os.makedirs(my_dir)
